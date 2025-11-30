@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toy Poodle Trainer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>🐩 Poodle Trainer Pro</h1>
+            <div id="status-indicator" class="status-indicator">Listening...</div>
+        </header>
+
+        <main class="stage">
+            <div id="poodle-container" class="poodle-container">
+                <video id="poodle-video" class="poodle-video" poster="assets/poodle-stand.png" muted playsinline loop>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="speech-bubble" id="speech-bubble">Woof!</div>
+            </div>
+        </main>
+
+        <audio id="bark-audio" src="assets/bark.mp3" preload="auto"></audio>
+
+        <nav class="controls">
+            <button class="control-btn" data-command="move-left" title="Go Left">
+                <span class="material-symbols-rounded">arrow_back</span>
+                <span class="label">Left</span>
+            </button>
+            <button class="control-btn" data-command="sit" title="Sit">
+                <span class="material-symbols-rounded">chair</span>
+                <span class="label">Sit</span>
+            </button>
+            <button class="control-btn" data-command="jump" title="Jump">
+                <span class="material-symbols-rounded">vertical_align_top</span>
+                <span class="label">Jump</span>
+            </button>
+            <button class="control-btn" data-command="stay" title="Stay">
+                <span class="material-symbols-rounded">pan_tool</span>
+                <span class="label">Stay</span>
+            </button>
+            <button class="control-btn" data-command="come" title="Come">
+                <span class="material-symbols-rounded">pets</span>
+                <span class="label">Come</span>
+            </button>
+            <button class="control-btn" data-command="move-right" title="Go Right">
+                <span class="material-symbols-rounded">arrow_forward</span>
+                <span class="label">Right</span>
+            </button>
+            <button class="control-btn" data-command="go-back" title="Go Back">
+                <span class="material-symbols-rounded">undo</span>
+                <span class="label">Go Back</span>
+            </button>
+            <button class="control-btn" data-command="bark" title="Bark">
+                <span class="material-symbols-rounded">campaign</span>
+                <span class="label">Bark</span>
+            </button>
+            <button class="control-btn toggle-mic" id="mic-btn" title="Toggle Microphone">
+                <span class="material-symbols-rounded">mic</span>
+            </button>
+        </nav>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
