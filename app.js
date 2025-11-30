@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
         jump: 'assets/poodle-jump.png',
         stay: 'assets/poodle-stand.png',
         come: 'assets/poodle-come.png',
-        move: 'assets/poodle-left.png',
+        'move-left': 'assets/poodle-left.png',
+        'move-right': 'assets/poodle-right.png',
         'go-back': 'assets/poodle-go-back.png'
     };
 
@@ -120,13 +121,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Keep jump image visible (removed auto-reset to idle)
                 break;
             case 'move-left':
-                loadMedia('move');
+                loadMedia('move-left');
                 poodleContainer.classList.remove('move-right');
                 poodleContainer.classList.add('move-left');
                 currentState = 'move';
                 break;
             case 'move-right':
-                loadMedia('move');
+                loadMedia('move-right');
                 poodleContainer.classList.remove('move-left');
                 poodleContainer.classList.add('move-right');
                 currentState = 'move';
